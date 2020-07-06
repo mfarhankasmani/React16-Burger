@@ -1,6 +1,5 @@
 // Create Order Summary
 import React from 'react';
-import Aux from '../../../hoc/Aux';
 import Button from '../../UI/Button/Button';
 
 const orderSummary = (props) => {
@@ -12,7 +11,7 @@ const orderSummary = (props) => {
         )
     });
     return (
-        <Aux>
+        <React.Fragment>
             <h3>Your Order</h3>
             <p>Burger with the following Indredients</p>
             <ul>
@@ -22,7 +21,7 @@ const orderSummary = (props) => {
             <p>Continue to Checkout?</p>
             <Button btnType="Danger" clicked ={props.purchaseCancelled}>CANCEL</Button>
             <Button btnType="Success" clicked ={props.purchaseContinue}>CONTINUE</Button>
-        </Aux>
+        </React.Fragment>
     )
 
 };
